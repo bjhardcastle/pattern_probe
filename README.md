@@ -5,3 +5,5 @@ An interface for probing receptive fields with the Panels system
 - add `Pattern_Probe.mat` to SD card in position #1
 - copy `Pattern_Probe` `.m`, `.fig` & `.mat` files to `\Controller\` folder (to keep with PControl and loading .bmp)
 - run with `Pattern_Probe`
+
+BJH May 2017

@@ -1,0 +1,9 @@
+*.*
+!/.gitignore
+!/readme.md
+!/license.txt
+!/Pattern_Probe.m
+!/Pattern_Probe.fig
+!/Pattern_Probe.mat
+!/make_pattern_probe.m
+

@@ -33,7 +33,11 @@ function Pattern_Probe_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to Pattern_Player (see VARARGIN)
 Panel_com('stop');
 
-[I, map] = imread('loading.bmp', 'BMP');
+try
+    [I, map] = imread('loading.bmp', 'BMP');
+catch
+   [I, map] = imread('Please_load.bmp', 'BMP'); % iorodeo version
+end
 axes(handles.axes1); 
 colormap(map);
 image(I);
@@ -482,6 +486,8 @@ switch get(handles.jigglebutton,'Value')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % For 2p - just move back and forth +/- 1 pixel:
+x_plus = 1; x_minus = 1;
+y_plus = 1; y_minus = 1;
 while  get(handles.jigglebutton,'Value') == 1
     
   switch get(handles.togglebutton1,'Value')
